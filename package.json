@@ -1,0 +1,24 @@
+{
+  "name": "apple-2014-clone",
+  "version": "0.1.0",
+  "description": "Apple's 2014 homepage clone",
+  "main": "",
+  "scripts": {
+    "lintcss": "stylelint assets/css",
+    "lintcss:fix": "stylelint --fix assets/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WinterCore/microverse-backgrounds-and-gradients.git"
+  },
+  "author": "WinterCore",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AdfPizarro/microverse-backgrounds-and-gradients/issues"
+  },
+  "homepage": "https://github.com/AdfPizarro/microverse-backgrounds-and-gradients#readme",
+  "devDependencies": {
+    "stylelint": "^13.3.3",
+    "stylelint-config-recommended": "^3.0.0"
+  }
+}
