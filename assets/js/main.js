@@ -1,8 +1,8 @@
-const searchInput = document.querySelector("#nav-search-input");
+const searchInput = document.querySelector('#nav-search-input');
 
-searchInput.addEventListener("focus", function () {
-    this.parentNode.parentNode.classList.add("expanded");
+searchInput.addEventListener('focus', function handleSearchInputFocus() {
+  this.parentNode.parentNode.classList.add('expanded');
 });
-searchInput.addEventListener("blur", function () {
-    this.parentNode.parentNode.classList.remove("expanded");
+searchInput.addEventListener('blur', function handleSearchInputBlur() {
+  this.parentNode.parentNode.classList.remove('expanded');
 });
