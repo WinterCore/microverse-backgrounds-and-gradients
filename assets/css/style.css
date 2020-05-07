@@ -5,15 +5,30 @@
 body {
   margin: 0;
   min-width: 1000px;
-  display: flex;
-  justify-content: center;
 }
 
-body > section {
-  min-width: 1100px;
-  max-width: 1440px;
-  flex-grow: 1;
+a {
+  text-decoration: none;
+  color: #08c;
 }
+
+article a {
+  display: block;
+  margin-top: 20px;
+}
+
+nav ul li a {
+  background: url(../images/icons.png);
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  height: 100%;
+  z-index: 10;
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
+a:hover { text-decoration: underline; }
 
 ul {
   list-style: none;
@@ -25,12 +40,15 @@ section.hero {
   background: url(../images/main-bg.jpg);
   background-position: bottom;
   background-size: cover;
-  min-height: 600px;
-  padding-top: 90px;
+  min-height: 570px;
+  height: 66vh;
+  padding-top: 75px;
+  display: flex;
+  flex-direction: column;
 }
 
 article {
-  margin-top: 30px;
+  flex-grow: 1;
 }
 
 article img {
@@ -41,11 +59,6 @@ article img {
 article img:nth-child(2) {
   position: relative;
   top: -10px;
-}
-
-article a {
-  display: block;
-  margin-top: 20px;
 }
 
 article .link-image {
@@ -70,8 +83,6 @@ nav {
 
 nav ul {
   height: 100%;
-  display: grid;
-  display: flex;
 }
 
 nav ul li + li::before {
@@ -95,17 +106,6 @@ nav ul li {
   background: linear-gradient(to bottom, #888 0%, #707070 49%, #5e5e5e 50%, #717571 100%);
 }
 
-nav ul li a {
-  background: url(../images/icons.png);
-  background-repeat: no-repeat;
-  background-position-x: 50%;
-  height: 100%;
-  z-index: 10;
-  position: relative;
-  width: 100%;
-  display: block;
-}
-
 nav ul .nav-logo a { background-position-y: 4px; }
 
 nav ul .nav-store a { background-position-y: -26px; }
@@ -115,6 +115,16 @@ nav ul .nav-iphone a { background-position-y: -116px; }
 nav ul .nav-ipad a { background-position-y: -146px; }
 nav ul .nav-itunes a { background-position-y: -176px; }
 nav ul .nav-support a { background-position-y: -206px; }
+
+footer .footer-nav-wrapper .footer-links li {
+  display: inline;
+}
+
+footer .footer-nav-wrapper .footer-links li + li {
+  border-left: 1px solid #ccc;
+  margin-left: 5px;
+  padding-left: 5px;
+}
 
 nav ul li:hover:not(:last-child),
 nav ul li:active:not(:last-child) {
@@ -128,8 +138,6 @@ nav ul li:not(:last-child) a:active {
 }
 
 nav ul .nav-search-input {
-  display: flex;
-  align-items: center;
   padding: 0 13px;
   width: 132px;
   max-width: 132px;
@@ -179,3 +187,65 @@ nav ul .nav-search-input.expanded input {
 nav ul .nav-search-input.expanded .search-outer::before {
   background: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGJhc2VQcm9maWxlPSJmdWxsIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWxuczpldj0iaHR0cDovL3d3dy53My5vcmcvMjAwMS94bWwtZXZlbnRzIj4KPGc%2BCgk8cG9seWdvbiBmaWxsPSIjNjY2IiBwb2ludHM9IjkuMjA3LDYuMTI2IDcuNzkzLDcuNTQxIDExLjc5MywxMS41NDEgMTMuMjA3LDEwLjEyNiIgLz4KCTxwYXRoIGZpbGw9IiM2NjYiIGQ9Ik01LjkxNywyYzEuNjA4LDAsMi45MTcsMS4zMDgsMi45MTcsMi45MTdTNy41MjUsNy44MzMsNS45MTcsNy44MzNTMyw2LjUyNSwzLDQuOTE3UzQuMzA4LDIsNS45MTcsMgoJCSBNNS45MTcsMEMzLjIwMSwwLDEsMi4yMDEsMSw0LjkxN3MyLjIwMSw0LjkxNyw0LjkxNyw0LjkxN3M0LjkxNy0yLjIwMSw0LjkxNy00LjkxN0MxMC44MzMsMi4yMDEsOC42MzIsMCw1LjkxNywwTDUuOTE3LDB6IiAvPgo8L2c%2BCjwvc3ZnPgo%3D);
 }
+
+aside.promo-section {
+  margin-top: 2px;
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+aside.promo-section .promo-container {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+.promo-iphone5s { background-image: url(../images/promo_iphone5s.jpg); }
+.promo-iphone5c { background-image: url(../images/promo_iphone5c.jpg); }
+.promo-mac { background-image: url(../images/promo_mac.jpg); }
+.promo-supplier-responsibility { background-image: url(../images/promo_supplier_responsibility.jpg); }
+
+footer {
+  font-family: sans-serif;
+  font-size: 9.8px;
+  line-height: 18px;
+  color: #6e6e6e;
+  padding: 25px 0;
+}
+
+footer .footer-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+footer .footer-nav-wrapper {
+  width: 100%;
+}
+
+footer .footer-nav-wrapper .footer-links .language-switcher {
+  position: relative;
+  bottom: -4px;
+}
+
+footer .copyright {
+  margin-top: 20px;
+}
+
+body > section,
+body > aside,
+body > footer {
+  min-width: 1100px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* Helper Classes */
+
+.flex { display: flex; }
+.flex.column { flex-direction: column; }
+.flex.align-start { align-items: flex-start; }
+.flex.align-center { align-items: center; }
+.flex.align-end { align-items: flex-end; }
+.flex.justify-center { justify-content: center; }
+.flex.justify-space-between { justify-content: space-between; }
