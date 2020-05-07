@@ -126,6 +126,12 @@ footer .footer-nav-wrapper .footer-links li + li {
   padding-left: 5px;
 }
 
+aside.promo-section .promo-container a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 nav ul li:hover:not(:last-child),
 nav ul li:active:not(:last-child) {
   background: -moz-linear-gradient(top, #5c5c5c 0%, #434343 49%, #383838 50%, #525252 100%);
