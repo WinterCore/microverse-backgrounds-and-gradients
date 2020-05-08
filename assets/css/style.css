@@ -47,10 +47,6 @@ section.hero {
   flex-direction: column;
 }
 
-article {
-  flex-grow: 1;
-}
-
 article img {
   display: block;
   margin: 0 auto;
@@ -68,7 +64,7 @@ article .link-image {
   height: 32px;
 }
 
-article a:hover .link-image {
+article .link-image:hover {
   background-position-y: 32px;
 }
 
@@ -146,7 +142,6 @@ nav ul li:not(:last-child) a:active {
 nav ul .nav-search-input {
   padding: 0 13px;
   width: 132px;
-  max-width: 132px;
   transition: all 0.3s ease-in-out;
 }
 
@@ -182,7 +177,6 @@ nav ul .nav-search-input input:focus {
 
 nav ul .nav-search-input.expanded {
   width: 185px;
-  max-width: 185px;
 }
 
 nav ul .nav-search-input.expanded input {
@@ -249,6 +243,7 @@ body > footer {
 /* Helper Classes */
 
 .flex { display: flex; }
+.flex.grow-1 { flex-grow: 1; }
 .flex.column { flex-direction: column; }
 .flex.align-start { align-items: flex-start; }
 .flex.align-center { align-items: center; }
