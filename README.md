@@ -24,6 +24,8 @@ To get a local copy up and running follow these simple example steps.
 ## Commands
 - `lintcss` Checks the css for any lint errors
 - `lintcss:fix` Checks the css for any lint errors and tries to fix what it can
+- `validate-html` Validate the structure of the HTML
+- `lintjs` Checks the javascript for any lint errors
 
 Note: You need to do `npm install` before executing the commands above.
 
