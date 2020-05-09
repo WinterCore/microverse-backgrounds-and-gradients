@@ -7,7 +7,7 @@
     "lintcss": "stylelint assets/css",
     "lintcss:fix": "stylelint --fix assets/css",
     "lintjs": "eslint .",
-    "validate-html": "html-validator --quiet --file index.html",
+    "validate-html": "html-validator --file index.html",
     "lint": "npm run validate-html && npm run lintcss && npm run lintjs"
   },
   "repository": {

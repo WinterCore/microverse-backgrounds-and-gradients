@@ -12,11 +12,6 @@ a {
   color: #08c;
 }
 
-article a {
-  display: block;
-  margin-top: 20px;
-}
-
 nav ul li a {
   background: url(../images/icons.png);
   background-repeat: no-repeat;
@@ -47,28 +42,28 @@ section.hero {
   flex-direction: column;
 }
 
-article {
-  flex-grow: 1;
+section.hero h1 {
+  margin: 0;
 }
 
 article img {
-  display: block;
   margin: 0 auto;
 }
 
-article img:nth-child(2) {
+article h2 {
+  margin: 0;
   position: relative;
-  top: -10px;
+  top: -16px;
 }
 
 article .link-image {
   background: url(../images/texts/link.png);
-  margin: 0 auto;
+  margin: 20px auto 0;
   width: 980px;
   height: 32px;
 }
 
-article a:hover .link-image {
+article .link-image:hover {
   background-position-y: 32px;
 }
 
@@ -79,10 +74,6 @@ nav {
   box-shadow: rgba(0, 0, 0, 0.296875) 0 1px 2px;
   border-radius: 3px;
   overflow: hidden;
-}
-
-nav ul {
-  height: 100%;
 }
 
 nav ul li + li::before {
@@ -107,7 +98,6 @@ nav ul li {
 }
 
 nav ul .nav-logo a { background-position-y: 4px; }
-
 nav ul .nav-store a { background-position-y: -26px; }
 nav ul .nav-mac a { background-position-y: -56px; }
 nav ul .nav-ipod a { background-position-y: -86px; }
@@ -126,6 +116,17 @@ footer .footer-nav-wrapper .footer-links li + li {
   padding-left: 5px;
 }
 
+aside.promo-section .promo-container a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+nav ul {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr) auto;
+}
+
 nav ul li:hover:not(:last-child),
 nav ul li:active:not(:last-child) {
   background: -moz-linear-gradient(top, #5c5c5c 0%, #434343 49%, #383838 50%, #525252 100%);
@@ -140,7 +141,6 @@ nav ul li:not(:last-child) a:active {
 nav ul .nav-search-input {
   padding: 0 13px;
   width: 132px;
-  max-width: 132px;
   transition: all 0.3s ease-in-out;
 }
 
@@ -161,8 +161,10 @@ nav ul .nav-search-input .search-outer::before {
 nav ul .nav-search-input input {
   width: 100%;
   background: transparent;
-  display: block;
-  padding: 2px 18px 2px 22px;
+  padding-right: 18px;
+  padding-left: 22px;
+  height: 19px;
+  line-height: 19px;
   color: #fff;
   border-radius: 9px;
   border: none;
@@ -176,7 +178,6 @@ nav ul .nav-search-input input:focus {
 
 nav ul .nav-search-input.expanded {
   width: 185px;
-  max-width: 185px;
 }
 
 nav ul .nav-search-input.expanded input {
@@ -249,3 +250,5 @@ body > footer {
 .flex.align-end { align-items: flex-end; }
 .flex.justify-center { justify-content: center; }
 .flex.justify-space-between { justify-content: space-between; }
+.h-100 { height: 100%; }
+.d-block { display: block; }
